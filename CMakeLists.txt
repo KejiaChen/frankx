@@ -46,7 +46,7 @@ if(BUILD_PYTHON_MODULE)
     add_subdirectory(pybind11)
   else()
     find_package(Python COMPONENTS Interpreter Development)
-    find_package(pybind11 2.6 REQUIRED)
+    find_package(pybind11)
   endif()
 
   if(USE_PYTHON_EXTENSION)

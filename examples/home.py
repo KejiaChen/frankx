@@ -5,7 +5,7 @@ from frankx import Affine, JointMotion, LinearMotion, Robot
 
 if __name__ == '__main__':
     parser = ArgumentParser()
-    parser.add_argument('--host', default='172.16.0.2', help='FCI IP of the robot')
+    parser.add_argument('--host', default='192.168.5.11', help='FCI IP of the robot')
     args = parser.parse_args()
 
     # Connect to the robot
