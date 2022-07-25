@@ -20,9 +20,15 @@ if __name__ == '__main__':
     home_right = Waypoint(Affine(0.450, 0.05, 0.35), 1.65)
 
     motion = WaypointMotion([home_left], return_when_finished=False)
+    print("-------")
     thread = robot.move_async(motion)
 
     gripper_thread = gripper.move_unsafe_async(0.05)
+
+    # input('next movement\n')
+    # motion = WaypointMotion([home_right], return_when_finished=False)
+    # thread = robot.move_async(motion)
+
 
     for new_affine, new_width in [(home_right, 0.02), (home_left, 0.07), (home_right, 0.0)]:
         input('Press enter for new affine (also while in motion!)\n')
